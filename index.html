@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С днем рождения</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="hearts-canvas"></canvas>
+
+    <div class="wrapper">
+        <header class="hero">
+            <h1 class="title">Аделина, с днем рождения! 🥳</h1>
+        </header>
+
+        <section class="envelope-section">
+            <h2 class="section-title-handwritten">Тебе письмо 💌</h2>
+            <p class="section-subtitle">Кликни по конверту, чтобы открыть его</p>
+            
+            <div class="envelope-wrapper" id="envelope">
+                <div class="envelope">
+                    <div class="front">
+                        <div class="stamp">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="to-text">Кому: Любимой Аделине ❤️</div>
+                    <div class="back"></div>
+                    <div class="letter" id="letter-card">
+                        <div class="letter-text">
+                            <p class="letter-greeting">Аделина, привет! ❤️</p>
+                            <p>Поздравляю тебя с твоим 16-летием! Уже совсем взрослая) Хочу пожелать тебе оставаться такой же искренней, веселой и безумно милой девочкой.</p>
+                            <p>Пусть все твои желания исполняются, учеба дается легко, а грустные моменты обходят стороной. Я безумно рад, что ты есть в моей жизни, и очень ценю каждую минуту с тобой.</p>
+                            <p>Этот сайт — маленькое напоминание о том, как сильно ты мне дорога. С днем рождения, цветочек! 😘</p>
+                            <p class="letter-signature">Руслан</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="scrapbook-section">
+            <h2 class="section-title-handwritten">Твой маленький архив 📸</h2>
+            <p class="section-subtitle">(и чуть-чуть наш)</p>
+            
+            <div class="scrapbook-grid">
+                <div class="polaroid-card" style="--rotation: -3deg;">
+                    <div class="polaroid-img-wrapper">
+                        <img src="assets/photo_1.png" alt="Аделина с ушками">
+                    </div>
+                </div>
+
+                <div class="polaroid-card" style="--rotation: 4deg;">
+                    <div class="polaroid-img-wrapper">
+                        <img src="assets/photo_2.png" alt="Аделина peace sign">
+                    </div>
+                </div>
+
+                <div class="polaroid-card" style="--rotation: -2deg;">
+                    <div class="polaroid-img-wrapper">
+                        <img src="assets/photo_3.png" alt="Селфи в очках">
+                    </div>
+                </div>
+
+                <div class="polaroid-card" style="--rotation: 5deg;">
+                    <div class="polaroid-img-wrapper">
+                        <img src="assets/photo_4.jpg" alt="Мы вместе">
+                    </div>
+                </div>
+
+                <div class="polaroid-card" style="--rotation: -4deg;">
+                    <div class="polaroid-img-wrapper">
+                        <img src="assets/photo_5.png" alt="Я скучаю">
+                    </div>
+                </div>
+
+                <div class="polaroid-card" style="--rotation: 3deg;">
+                    <div class="polaroid-img-wrapper">
+                        <img src="assets/photo_6.png" alt="Красивый взгляд">
+                    </div>
+                </div>
+
+                <div class="polaroid-card" style="--rotation: -1deg;">
+                    <div class="polaroid-img-wrapper">
+                        <img src="assets/photo_7.png" alt="Поцелуй">
+                    </div>
+                </div>
+
+                <div class="polaroid-card" style="--rotation: 2deg;">
+                    <div class="polaroid-img-wrapper">
+                        <img src="assets/photo_8.jpg" alt="мы? (я симба)">
+                    </div>
+                    <div class="polaroid-caption">мы? (я симба)</div>
+                </div>
+
+                <div class="polaroid-card" style="--rotation: -2deg;">
+                    <div class="polaroid-img-wrapper">
+                        <img src="assets/photo_9.jpg" alt="Аделина в очках">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reasons-section">
+            <div class="reasons-card">
+                <div class="reasons-header">
+                    <i class="fa-solid fa-sparkles icon-sparkle"></i>
+                    <h2>10 причин, почему ты лучшая</h2>
+                    <p>Кликай на кнопку ниже, чтобы узнать одну из причин</p>
+                </div>
+                
+                <div class="reason-display-container">
+                    <div class="reason-bubble" id="reason-bubble">
+                        Тут просто нажми на кнопку ниже ❤️
+                    </div>
+                </div>
+                
+                <button class="btn-reason" id="next-reason-btn">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Узнать причину
+                </button>
+            </div>
+        </section>
+
+        <footer class="footer">
+        </footer>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightbox-close">&times;</button>
+            <img src="" alt="Увеличенное фото" class="lightbox-img" id="lightbox-img">
+            <div class="lightbox-caption" id="lightbox-caption">Подпись</div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
