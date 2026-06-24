@@ -601,6 +601,12 @@ body {
         top: 0;
         border-width: 85px 130px 0 130px;
     }
+    .letter {
+        width: 230px;
+        height: 140px;
+        left: 15px;
+        top: 15px;
+    }
     .envelope-wrapper.open .letter {
         height: 320px;
         width: 260px;
